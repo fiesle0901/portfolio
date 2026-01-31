@@ -6,12 +6,15 @@ import Navbar from "./components/Navbar"
 import Projects from "./components/Projects"
 import Resume from "./components/Resume"
 import Education from "./components/Education"
+import BackgroundBlobs from "./components/BackgroundBlobs"
 
 
 function App() {
   return (
-    <div className="min-h-screen max-w-4xl mx-auto bg-primary text-gray-200 font-mono">
-      <Navbar />
+    <div className="min-h-screen text-gray-200 font-mono relative">
+      <BackgroundBlobs />
+      <div className="max-w-6xl mx-auto relative z-10">
+        <Navbar />
       <main>
         <Hero />
         <About />
@@ -20,7 +23,9 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      <Footer />
+
+        <Footer />
+      </div>
     </div>
   )
 }
